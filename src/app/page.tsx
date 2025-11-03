@@ -32,6 +32,10 @@ import {
   Clock,
   Star,
   TrendingUp,
+  MessageSquare,
+  PenTool,
+  CheckCircle,
+  Globe,
 } from "lucide-react";
 
 export default function Home() {
@@ -68,7 +72,7 @@ export default function Home() {
               </a>
             </div>
             <a
-              href="tel:+1234567890"
+              href="tel:+12269750627"
               className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors border border-white/10"
             >
               <Calendar className="w-4 h-4" />
@@ -90,37 +94,37 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-6 bg-cyan-500/10 text-cyan-400 border-cyan-500/20 hover:bg-cyan-500/20">
-                专业辅导 Professional Tutoring
+                英语专家 English Language Specialist
               </Badge>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-pink-500 bg-clip-text text-transparent">
-                Dr. Li's
+                Dr. Li's Learning
                 <br />
-                Learning Clinic
+                Clinic
               </h1>
               <p className="text-2xl md:text-3xl text-gray-300 mb-6">
-                启发智慧，成就未来
+                专注英语，成就梦想
                 <br />
-                Inspire Minds, Achieve Excellence
+                Master English, Achieve Your Dreams
               </p>
               <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                提供个性化一对一辅导，涵盖数学、科学、英语等科目。我们致力于帮助每位学生发掘潜能，取得学业成功。
-                Personalized one-on-one tutoring in Math, Science, English, and more.
+                专业CLB 5/7及雅思口语写作培训。我们专注于帮助学生快速提升英语能力，达到移民、留学和职业发展目标。
+                Expert training in CLB 5/7 and IELTS Speaking & Writing. Fast-track your English proficiency for immigration, study, and career goals.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
                 >
-                  免费试课 Free Trial
+                  免费评估 Free Assessment
                   <ChevronDown className="ml-2 w-4 h-4" />
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/20 hover:bg-white/5"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
                 >
                   <Clock className="mr-2 w-4 h-4" />
-                  查看时间表 Schedule
+                  查看课表 Schedule
                 </Button>
               </div>
             </div>
@@ -140,12 +144,12 @@ export default function Home() {
                 </div>
                 <div className="bg-black p-8 aspect-video flex flex-col items-center justify-center">
                   <div className="text-center">
-                    <GraduationCap className="w-16 h-16 mx-auto mb-4 text-cyan-400" />
+                    <BookOpen className="w-16 h-16 mx-auto mb-4 text-cyan-400" />
                     <h3 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-2">
                       李博士学习诊所
                     </h3>
                     <p className="text-sm text-gray-400">
-                      Dr. Li's Learning Clinic
+                      CLB • IELTS • English Excellence
                     </p>
                   </div>
                 </div>
@@ -163,74 +167,74 @@ export default function Home() {
       <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">核心优势 Core Features</h2>
-            <p className="text-gray-400 text-lg">为什么选择我们？ Why Choose Us?</p>
+            <h2 className="text-4xl font-bold mb-4">核心优势 Core Advantages</h2>
+            <p className="text-gray-400 text-lg">为什么选择我们的英语培训？ Why Choose Our English Training?</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Feature Card 1 */}
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-6 hover:border-cyan-500/50 transition-all duration-300">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
-                <GraduationCap className="w-7 h-7 text-white" />
+                <Award className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">博士级导师 Expert Tutors</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-3">CELPIP 考官 Official Examiner</h3>
               <p className="text-gray-400 leading-relaxed">
-                所有导师均拥有博士学位或硕士学历，教学经验丰富。All tutors hold PhD or Master's degrees with extensive teaching experience.
+                现任CELPIP写作考官，深谙评分标准和应试策略。Current CELPIP Writing Examiner with deep insights into scoring criteria.
               </p>
             </Card>
 
             {/* Feature Card 2 */}
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-6 hover:border-cyan-500/50 transition-all duration-300">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
-                <Target className="w-7 h-7 text-white" />
+                <MessageSquare className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">个性化教学 Personalized Learning</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-3">口语突破 Speaking Excellence</h3>
               <p className="text-gray-400 leading-relaxed">
-                根据每位学生的学习风格和需求定制课程计划。Customized curriculum tailored to each student's learning style and needs.
+                针对性口语训练，模拟真实考试场景，快速提升流利度和准确性。Targeted speaking practice with real exam simulations.
               </p>
             </Card>
 
             {/* Feature Card 3 */}
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-6 hover:border-cyan-500/50 transition-all duration-300">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
-                <TrendingUp className="w-7 h-7 text-white" />
+                <PenTool className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">显著提升 Proven Results</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-3">写作提升 Writing Mastery</h3>
               <p className="text-gray-400 leading-relaxed">
-                98%的学生成绩提高一个等级以上。98% of students improve by at least one grade level.
+                系统写作训练，涵盖所有题型，提供详细批改和个性化反馈。Comprehensive writing training with detailed feedback.
               </p>
             </Card>
 
             {/* Feature Card 4 */}
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-6 hover:border-cyan-500/50 transition-all duration-300">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
-                <Brain className="w-7 h-7 text-white" />
+                <Target className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">批判性思维 Critical Thinking</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-3">定制课程 Customized Plans</h3>
               <p className="text-gray-400 leading-relaxed">
-                不仅传授知识，更培养学生的思维能力和学习方法。Focus on developing critical thinking skills and effective learning strategies.
+                根据您的当前水平和目标分数，量身定制学习计划。Personalized study plans based on your level and target score.
               </p>
             </Card>
 
             {/* Feature Card 5 */}
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-6 hover:border-cyan-500/50 transition-all duration-300">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
-                <Clock className="w-7 h-7 text-white" />
+                <CheckCircle className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">灵活安排 Flexible Schedule</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-3">高通过率 High Success Rate</h3>
               <p className="text-gray-400 leading-relaxed">
-                线上线下均可，时间灵活安排，适应您的日程。Both online and in-person options with flexible scheduling to fit your calendar.
+                95%的学生在3个月内达到目标分数。95% of students achieve their target scores within 3 months.
               </p>
             </Card>
 
             {/* Feature Card 6 */}
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-6 hover:border-cyan-500/50 transition-all duration-300">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
-                <Award className="w-7 h-7 text-white" />
+                <Globe className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">考试准备 Test Prep Excellence</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-3">移民就业 Immigration & Career</h3>
               <p className="text-gray-400 leading-relaxed">
-                SAT、ACT、AP、IB等各类考试专业辅导。Specialized preparation for SAT, ACT, AP, IB, and more.
+                专注移民和职业发展所需的英语能力培训。Focus on English skills for immigration and career advancement.
               </p>
             </Card>
           </div>
@@ -241,148 +245,152 @@ export default function Home() {
       <section id="programs" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">课程项目 Our Programs</h2>
+            <h2 className="text-4xl font-bold mb-4">专业课程 Specialized Programs</h2>
             <p className="text-gray-400 text-lg">
-              选择适合您的辅导课程 Choose the Right Program for You
+              选择适合您的英语课程 Choose Your English Program
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {/* Math Program */}
+            {/* CLB 5 Program */}
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-6">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
-                  <Sparkles className="w-8 h-8 text-cyan-400" />
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-600 to-blue-700 flex items-center justify-center">
+                  <div className="text-2xl font-bold">5</div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">数学辅导 Mathematics</h3>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">CLB 5 基础强化</h3>
                   <p className="text-gray-400 text-sm">
-                    从基础到高级，全面覆盖
+                    Canadian Language Benchmark Level 5
                   </p>
                 </div>
               </div>
-              <div className="bg-black/50 rounded-lg p-4 border border-white/5">
+              <div className="bg-black/50 rounded-lg p-4 border border-white/5 mb-4">
+                <p className="text-gray-300 mb-4">
+                  适合移民申请、工作签证等基础英语要求。Perfect for immigration applications and work permits.
+                </p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    代数 Algebra I & II
+                    <MessageSquare className="w-4 h-4 text-cyan-400" />
+                    <span>口语 Speaking: 日常对话、工作交流 Daily & Work Communication</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    几何 Geometry
+                    <PenTool className="w-4 h-4 text-cyan-400" />
+                    <span>写作 Writing: 基础书信、简单报告 Letters & Simple Reports</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    微积分 Calculus (AP/IB)
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    统计学 Statistics
+                    <CheckCircle className="w-4 h-4 text-cyan-400" />
+                    <span>目标达成时间 Timeline: 2-3个月 2-3 months</span>
                   </li>
                 </ul>
               </div>
             </Card>
 
-            {/* Science Program */}
+            {/* CLB 7 Program */}
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-6">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
-                  <Brain className="w-8 h-8 text-cyan-400" />
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                  <div className="text-2xl font-bold">7</div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">科学辅导 Sciences</h3>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">CLB 7 高级进阶</h3>
                   <p className="text-gray-400 text-sm">
-                    物理、化学、生物全科
+                    Canadian Language Benchmark Level 7
                   </p>
                 </div>
               </div>
-              <div className="bg-black/50 rounded-lg p-4 border border-white/5">
+              <div className="bg-black/50 rounded-lg p-4 border border-white/5 mb-4">
+                <p className="text-gray-300 mb-4">
+                  适合快速移民通道、专业认证等高级要求。For Express Entry and professional certification.
+                </p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    物理 Physics (AP/Honors)
+                    <MessageSquare className="w-4 h-4 text-purple-400" />
+                    <span>口语 Speaking: 复杂话题、专业讨论 Complex Topics & Professional Discussions</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    化学 Chemistry (AP/IB)
+                    <PenTool className="w-4 h-4 text-purple-400" />
+                    <span>写作 Writing: 学术写作、商务报告 Academic & Business Writing</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    生物 Biology (AP/IB)
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    环境科学 Environmental Science
+                    <CheckCircle className="w-4 h-4 text-purple-400" />
+                    <span>目标达成时间 Timeline: 3-4个月 3-4 months</span>
                   </li>
                 </ul>
               </div>
             </Card>
 
-            {/* English/Language Arts */}
+            {/* IELTS Speaking */}
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-6">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
-                  <BookOpen className="w-8 h-8 text-cyan-400" />
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center">
+                  <MessageSquare className="w-8 h-8" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">英语文学 English & Literature</h3>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">雅思口语 IELTS Speaking</h3>
                   <p className="text-gray-400 text-sm">
-                    阅读、写作、语法全面提升
+                    Part 1, 2 & 3 Mastery
                   </p>
                 </div>
               </div>
-              <div className="bg-black/50 rounded-lg p-4 border border-white/5">
+              <div className="bg-black/50 rounded-lg p-4 border border-white/5 mb-4">
+                <p className="text-gray-300 mb-4">
+                  全面覆盖三个部分，真题模拟，考官级反馈。Complete coverage with examiner-level feedback.
+                </p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    阅读理解 Reading Comprehension
+                    <Star className="w-4 h-4 text-green-400" />
+                    <span>Part 1: 日常话题快速应答 Quick Response to Daily Topics</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    学术写作 Academic Writing
+                    <Star className="w-4 h-4 text-green-400" />
+                    <span>Part 2: 独白演讲技巧 Monologue Speech Techniques</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    文学分析 Literary Analysis (AP)
+                    <Star className="w-4 h-4 text-green-400" />
+                    <span>Part 3: 深度讨论能力 In-depth Discussion Skills</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    ESL/托福 ESL & TOEFL Prep
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <span>目标 Target: 6.5-8.0分 Band Score</span>
                   </li>
                 </ul>
               </div>
             </Card>
 
-            {/* Test Prep */}
+            {/* IELTS Writing */}
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-6">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
-                  <Award className="w-8 h-8 text-cyan-400" />
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center">
+                  <PenTool className="w-8 h-8" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">考试准备 Test Preparation</h3>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">雅思写作 IELTS Writing</h3>
                   <p className="text-gray-400 text-sm">
-                    标准化考试专业训练
+                    Task 1 & Task 2 Excellence
                   </p>
                 </div>
               </div>
-              <div className="bg-black/50 rounded-lg p-4 border border-white/5">
+              <div className="bg-black/50 rounded-lg p-4 border border-white/5 mb-4">
+                <p className="text-gray-300 mb-4">
+                  任务1和2全面突破，高分模板和批改服务。High-scoring templates with detailed corrections.
+                </p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    SAT/ACT 备考 Comprehensive Prep
+                    <Star className="w-4 h-4 text-orange-400" />
+                    <span>Task 1: 图表描述、流程图、地图 Charts, Processes, Maps</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    AP科目 AP Subject Tests
+                    <Star className="w-4 h-4 text-orange-400" />
+                    <span>Task 2: 议论文、观点分析 Essays & Opinion Analysis</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    IB课程 IB Diploma Program
+                    <Star className="w-4 h-4 text-orange-400" />
+                    <span>逐篇批改 Individual Essay Correction & Feedback</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-cyan-400" />
-                    大学申请 College Application Essays
+                    <CheckCircle className="w-4 h-4 text-orange-400" />
+                    <span>目标 Target: 6.5-8.0分 Band Score</span>
                   </li>
                 </ul>
               </div>
@@ -397,7 +405,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">课时安排 Session Options</h2>
             <p className="text-gray-400 text-lg">
-              灵活的课程时长和优惠套餐 Flexible Duration & Package Deals
+              灵活的课程安排和优惠套餐 Flexible Sessions & Package Deals
             </p>
           </div>
 
@@ -405,41 +413,41 @@ export default function Home() {
             {/* Session Types */}
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-8">
               <h3 className="text-2xl font-bold mb-6 text-cyan-400">
-                课时选择 Session Types
+                课程选项 Course Options
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-white/5">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-sm font-bold">
-                    60
+                    1:1
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold mb-1">标准课时 Standard Session</div>
+                    <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-1">一对一课程 One-on-One</div>
                     <div className="text-sm text-gray-400">
-                      60分钟 60 minutes - 一对一辅导
+                      60分钟/课 60 min - 个性化定制 Personalized
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-white/5">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-sm font-bold">
-                    90
+                    1:3
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold mb-1">强化课时 Intensive Session</div>
+                    <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-1">小班课程 Small Group</div>
                     <div className="text-sm text-gray-400">
-                      90分钟 90 minutes - 深度学习
+                      90分钟/课 90 min - 3-5人小组 3-5 students
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-white/5">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-sm font-bold">
-                    120
+                    冲刺
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold mb-1">专项突破 Extended Session</div>
+                    <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-1">考前冲刺 Intensive Prep</div>
                     <div className="text-sm text-gray-400">
-                      120分钟 2 hours - 考试冲刺
+                      2小时/课 2 hours - 模拟考试 Mock Tests
                     </div>
                   </div>
                 </div>
@@ -452,32 +460,30 @@ export default function Home() {
                 联系方式 Contact Information
               </h3>
               <p className="text-gray-400 mb-6">
-                欢迎咨询课程详情和价格信息。我们提供免费试课和学习评估。
+                欢迎咨询课程详情和价格。提供免费英语水平评估和学习规划。
                 <br />
-                Contact us for detailed pricing and packages. Free trial session and learning assessment available.
+                Contact us for pricing. Free English level assessment and study planning available.
               </p>
 
               <div className="space-y-4">
                 <div className="p-4 bg-black/30 rounded-lg border border-white/5">
                   <div className="text-sm text-cyan-400 mb-2">电话 Phone</div>
-                  <div className="font-mono text-lg">
-                    (123) 456-7890
+                  <div className="font-mono text-lg bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
+                    (226) 975-0627
                   </div>
                 </div>
 
                 <div className="p-4 bg-black/30 rounded-lg border border-white/5">
                   <div className="text-sm text-cyan-400 mb-2">邮箱 Email</div>
-                  <div className="font-mono text-lg">
-                    info@drlilearning.com
+                  <div className="font-mono text-lg bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
+                    li81@uwindsor.ca
                   </div>
                 </div>
 
                 <div className="p-4 bg-black/30 rounded-lg border border-white/5">
-                  <div className="text-sm text-cyan-400 mb-2">地址 Address</div>
-                  <div className="text-gray-300">
-                    123 Education Avenue, Suite 100
-                    <br />
-                    San Francisco, CA 94102
+                  <div className="text-sm text-cyan-400 mb-2">微信 WeChat</div>
+                  <div className="font-mono text-lg bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
+                    linl71
                   </div>
                 </div>
               </div>
@@ -494,7 +500,7 @@ export default function Home() {
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center">
                 <Monitor className="w-5 h-5" />
               </div>
-              <h3 className="text-2xl font-bold">授课方式 Learning Methods</h3>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">授课方式 Teaching Methods</h3>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -503,8 +509,8 @@ export default function Home() {
                   <Monitor className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-semibold">线上授课</div>
-                  <div className="text-sm text-gray-400">Online Classes</div>
+                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">线上授课</div>
+                  <div className="text-sm text-gray-400">Online via Zoom</div>
                 </div>
               </div>
 
@@ -513,28 +519,28 @@ export default function Home() {
                   <HomeIcon className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-semibold">线下面授</div>
+                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">线下面授</div>
                   <div className="text-sm text-gray-400">In-Person</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3 p-4 bg-black/30 rounded-lg border border-white/5">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <Users className="w-6 h-6" />
+                  <MessageSquare className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-semibold">小组课程</div>
-                  <div className="text-sm text-gray-400">Small Groups</div>
+                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">口语陪练</div>
+                  <div className="text-sm text-gray-400">Speaking Practice</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3 p-4 bg-black/30 rounded-lg border border-white/5">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <Target className="w-6 h-6" />
+                  <PenTool className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-semibold">一对一</div>
-                  <div className="text-sm text-gray-400">One-on-One</div>
+                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">作文批改</div>
+                  <div className="text-sm text-gray-400">Essay Correction</div>
                 </div>
               </div>
             </div>
@@ -550,28 +556,28 @@ export default function Home() {
               <div className="text-5xl font-bold text-cyan-400 mb-2">
                 15+
               </div>
-              <div className="text-gray-400">年教学经验</div>
-              <div className="text-sm text-gray-500">Years Experience</div>
+              <div className="text-gray-400">年专注英语</div>
+              <div className="text-sm text-gray-500">Years of Experience</div>
             </Card>
 
             <Card className="bg-gradient-to-br from-blue-950/30 to-purple-950/30 border-blue-500/20 p-8 text-center">
               <div className="text-5xl font-bold text-blue-400 mb-2">
-                500+
+                800+
               </div>
-              <div className="text-gray-400">成功学生</div>
-              <div className="text-sm text-gray-500">Students Helped</div>
+              <div className="text-gray-400">成功学员</div>
+              <div className="text-sm text-gray-500">Successful Students</div>
             </Card>
 
             <Card className="bg-gradient-to-br from-purple-950/30 to-pink-950/30 border-purple-500/20 p-8 text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">98%</div>
-              <div className="text-gray-400">满意度</div>
-              <div className="text-sm text-gray-500">Satisfaction Rate</div>
+              <div className="text-5xl font-bold text-purple-400 mb-2">95%</div>
+              <div className="text-gray-400">达标率</div>
+              <div className="text-sm text-gray-500">Pass Rate</div>
             </Card>
 
             <Card className="bg-gradient-to-br from-pink-950/30 to-rose-950/30 border-pink-500/20 p-8 text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">A+</div>
-              <div className="text-gray-400">平均提升</div>
-              <div className="text-sm text-gray-500">Average Improvement</div>
+              <div className="text-5xl font-bold text-pink-400 mb-2">3个月</div>
+              <div className="text-gray-400">平均达标</div>
+              <div className="text-sm text-gray-500">Avg. Time to Goal</div>
             </Card>
           </div>
         </div>
@@ -581,7 +587,7 @@ export default function Home() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">学生反馈 Student Success</h2>
+            <h2 className="text-4xl font-bold mb-4">学生反馈 Student Success Stories</h2>
             <p className="text-gray-400 text-lg">
               听听我们学生的真实评价 Hear from Our Students
             </p>
@@ -591,18 +597,18 @@ export default function Home() {
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center font-bold">
-                  王
+                  张
                 </div>
                 <div>
-                  <div className="font-semibold">王晓明 Emily Wang</div>
-                  <div className="text-sm text-gray-400">高中生 High School Student</div>
+                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">张伟 David Zhang</div>
+                  <div className="text-sm text-gray-400">CLB 7 达标 Achieved</div>
                 </div>
               </div>
-              <p className="text-gray-300 italic">
-                "李博士的辅导让我的SAT数学从650分提高到了790分！他的教学方法清晰易懂，让我真正理解了数学概念。"
+              <p className="text-gray-300 italic mb-2">
+                "在李博士的帮助下，我从CLB 5提升到CLB 7只用了3个月！口语和写作都有显著进步，成功通过了快速移民通道。"
               </p>
-              <p className="text-gray-400 text-sm mt-2">
-                "Dr. Li helped me improve my SAT Math score from 650 to 790! His teaching methods are clear and helped me truly understand mathematical concepts."
+              <p className="text-gray-400 text-sm">
+                "With Dr. Li's help, I improved from CLB 5 to CLB 7 in just 3 months! Both speaking and writing improved significantly, and I successfully qualified for Express Entry."
               </p>
             </Card>
 
@@ -612,33 +618,33 @@ export default function Home() {
                   李
                 </div>
                 <div>
-                  <div className="font-semibold">李娜 Sarah Li</div>
-                  <div className="text-sm text-gray-400">大学生 College Student</div>
+                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">李梅 Mei Li</div>
+                  <div className="text-sm text-gray-400">IELTS 7.0 口语 Speaking</div>
                 </div>
               </div>
-              <p className="text-gray-300 italic">
-                "在Dr. Li的帮助下，我成功通过了AP化学和AP物理考试，双双获得5分！现在我对理科学习充满信心。"
+              <p className="text-gray-300 italic mb-2">
+                "雅思口语从5.5提高到7.0！李老师的教学方法非常有效，特别是Part 2和Part 3的技巧训练让我信心倍增。"
               </p>
-              <p className="text-gray-400 text-sm mt-2">
-                "With Dr. Li's help, I scored 5s on both AP Chemistry and AP Physics! Now I feel confident in science subjects."
+              <p className="text-gray-400 text-sm">
+                "My IELTS Speaking improved from 5.5 to 7.0! Dr. Li's teaching methods are very effective, especially the Part 2 and Part 3 technique training boosted my confidence."
               </p>
             </Card>
 
             <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-white/10 p-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center font-bold">
-                  张
+                  王
                 </div>
                 <div>
-                  <div className="font-semibold">张浩 Kevin Zhang</div>
-                  <div className="text-sm text-gray-400">中学生 Middle School Student</div>
+                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">王强 Kevin Wang</div>
+                  <div className="text-sm text-gray-400">IELTS 7.5 写作 Writing</div>
                 </div>
               </div>
-              <p className="text-gray-300 italic">
-                "以前我最怕数学，现在它成了我最喜欢的科目！李老师让学习变得有趣，我的成绩从C提高到了A。"
+              <p className="text-gray-300 italic mb-2">
+                "写作Task 2一直是我的弱项，在李博士的指导下，我掌握了高分模板和论证技巧，最终写作拿到了7.5分！"
               </p>
-              <p className="text-gray-400 text-sm mt-2">
-                "Math used to be my biggest fear, now it's my favorite subject! Dr. Li made learning fun, and my grades improved from C to A."
+              <p className="text-gray-400 text-sm">
+                "Writing Task 2 was always my weakness. With Dr. Li's guidance, I mastered high-scoring templates and argumentation techniques, and finally scored 7.5 in Writing!"
               </p>
             </Card>
 
@@ -648,15 +654,15 @@ export default function Home() {
                   陈
                 </div>
                 <div>
-                  <div className="font-semibold">陈美华 Michelle Chen</div>
-                  <div className="text-sm text-gray-400">家长 Parent</div>
+                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">陈晓 Grace Chen</div>
+                  <div className="text-sm text-gray-400">CLB 5 快速达标 Achieved</div>
                 </div>
               </div>
-              <p className="text-gray-300 italic">
-                "作为家长，我非常感激李博士的耐心和专业。我女儿不仅学业进步了，还变得更加自信和独立。"
+              <p className="text-gray-300 italic mb-2">
+                "两个月就达到了CLB 5的要求！李老师针对我的薄弱环节制定了学习计划，口语和写作都有了质的飞跃。"
               </p>
-              <p className="text-gray-400 text-sm mt-2">
-                "As a parent, I'm grateful for Dr. Li's patience and expertise. My daughter not only improved academically but also became more confident and independent."
+              <p className="text-gray-400 text-sm">
+                "I achieved CLB 5 requirements in just 2 months! Dr. Li created a study plan targeting my weak areas, and both my speaking and writing improved dramatically."
               </p>
             </Card>
           </div>
@@ -670,25 +676,29 @@ export default function Home() {
             <div>
               <h2 className="text-4xl font-bold mb-6">关于李博士 About Dr. Li</h2>
               <p className="text-gray-400 leading-relaxed mb-6">
-                李博士拥有斯坦福大学教育学博士学位和15年以上的教学经验。他专注于帮助学生建立扎实的学科基础，培养批判性思维能力，并在标准化考试中取得优异成绩。
+                李博士拥有心理学与教育研究博士学位，专注CLB和雅思培训15年以上。作为现任CELPIP写作考官和安大略省TESL认证教师，他深谙评分标准，能够精准把握学生的提升方向。
               </p>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Dr. Li holds a PhD in Education from Stanford University with over 15 years of teaching experience. He specializes in helping students build strong academic foundations, develop critical thinking skills, and excel in standardized tests.
+                Dr. Li holds a PhD in Psychology and Educational Studies with 15+ years specializing in CLB and IELTS training. As a current CELPIP Writing Examiner and Ontario TESL Certified Teacher, he has deep insights into scoring criteria and can precisely guide students to improvement.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <GraduationCap className="w-5 h-5 text-cyan-400" />
-                  <span className="text-gray-300">斯坦福大学教育学博士 PhD in Education, Stanford</span>
+                  <span className="text-gray-300">心理学与教育研究博士 PhD in Psychology & Educational Studies</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Award className="w-5 h-5 text-cyan-400" />
                   <span className="text-gray-300">
-                    15+年教学经验 15+ Years Teaching Experience
+                    现任CELPIP写作考官 Current CELPIP Writing Examiner
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">安大略省TESL认证教师 Ontario TESL Certified Teacher</span>
+                </div>
+                <div className="flex items-center gap-3">
                   <Star className="w-5 h-5 text-cyan-400" />
-                  <span className="text-gray-300">500+成功案例 500+ Success Stories</span>
+                  <span className="text-gray-300">800+学生成功案例 800+ Success Stories</span>
                 </div>
               </div>
             </div>
@@ -699,7 +709,7 @@ export default function Home() {
                   李
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">李博士学习诊所</h3>
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">李博士学习诊所</h3>
                   <p className="text-sm text-gray-400">
                     Dr. Li's Learning Clinic
                   </p>
@@ -708,31 +718,31 @@ export default function Home() {
 
               <div className="bg-gradient-to-br from-cyan-950/30 to-blue-950/30 border border-cyan-500/20 rounded-lg p-6 mb-6">
                 <p className="text-center text-lg italic text-gray-300">
-                  "启发每一位学生的潜能，成就他们的学业梦想"
+                  "专注英语，让每一位学生都能达到移民和职业发展的语言目标"
                 </p>
                 <p className="text-center text-sm text-gray-400 mt-2">
-                  "Unlock every student's potential and help them achieve their academic dreams"
+                  "Focused on English excellence, helping every student achieve their immigration and career language goals"
                 </p>
               </div>
 
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-3xl font-bold text-cyan-400 mb-1">
-                    个性化
+                    CLB
                   </div>
-                  <div className="text-xs text-gray-400">Personalized</div>
+                  <div className="text-xs text-gray-400">5 & 7</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-blue-400 mb-1">
-                    专业
+                    CELPIP
                   </div>
-                  <div className="text-xs text-gray-400">Professional</div>
+                  <div className="text-xs text-gray-400">Examiner</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-pink-400 mb-1">
-                    高效
+                    TESL
                   </div>
-                  <div className="text-xs text-gray-400">Effective</div>
+                  <div className="text-xs text-gray-400">Certified</div>
                 </div>
               </div>
             </Card>
@@ -753,7 +763,7 @@ export default function Home() {
                 <span className="text-xl font-bold">Dr. Li's Learning Clinic</span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                启发智慧，成就未来。专业的一对一辅导服务，助您实现学业目标。
+                专注英语，成就梦想。CLB和雅思专业培训，助您实现移民和职业目标。
               </p>
             </div>
 
@@ -763,12 +773,12 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
                   <a href="#features" className="hover:text-cyan-400 transition-colors">
-                    核心优势 Core Features
+                    核心优势 Advantages
                   </a>
                 </li>
                 <li>
                   <a href="#programs" className="hover:text-cyan-400 transition-colors">
-                    课程项目 Programs
+                    专业课程 Programs
                   </a>
                 </li>
                 <li>
@@ -781,21 +791,21 @@ export default function Home() {
 
             {/* Programs */}
             <div>
-              <h4 className="font-semibold mb-4">课程科目 Subjects</h4>
+              <h4 className="font-semibold mb-4">课程项目 Programs</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
                   <a href="#" className="hover:text-cyan-400 transition-colors">
-                    数学 Mathematics
+                    CLB 5 基础强化
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-cyan-400 transition-colors">
-                    科学 Sciences
+                    CLB 7 高级进阶
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-cyan-400 transition-colors">
-                    英语 English
+                    雅思口语写作 IELTS
                   </a>
                 </li>
               </ul>
@@ -806,17 +816,17 @@ export default function Home() {
               <h4 className="font-semibold mb-4">联系我们 Contact</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <a href="tel:+1234567890" className="hover:text-cyan-400 transition-colors">
-                    电话 (123) 456-7890
+                  <a href="tel:+12269750627" className="hover:text-cyan-400 transition-colors">
+                    电话 (226) 975-0627
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@drlilearning.com" className="hover:text-cyan-400 transition-colors">
-                    info@drlilearning.com
+                  <a href="mailto:li81@uwindsor.ca" className="hover:text-cyan-400 transition-colors">
+                    li81@uwindsor.ca
                   </a>
                 </li>
                 <li className="hover:text-cyan-400 transition-colors">
-                  San Francisco, CA
+                  微信 WeChat: linl71
                 </li>
               </ul>
             </div>
