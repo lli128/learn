@@ -149,7 +149,7 @@ export default function Home() {
                       李博士学习诊所
                     </h3>
                     <p className="text-sm text-gray-400">
-                      CLB • IELTS • English Excellence
+                      CLB 5/7 • IELTS • Speaking & Writing Excellence
                     </p>
                   </div>
                 </div>
