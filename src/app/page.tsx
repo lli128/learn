@@ -469,7 +469,7 @@ export default function Home() {
                 <div className="p-4 bg-black/30 rounded-lg border border-white/5">
                   <div className="text-sm text-cyan-400 mb-2">电话 Phone</div>
                   <div className="font-mono text-lg bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
-                    (226) 975-0627
+                    (548) 377-2188
                   </div>
                 </div>
 
