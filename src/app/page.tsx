@@ -139,7 +139,7 @@ export default function Home() {
                     <div className="w-3 h-3 rounded-full bg-green-500" />
                   </div>
                   <div className="flex-1 text-center text-sm text-gray-400">
-                    drlilearning.com
+                    canlearn.pro
                   </div>
                 </div>
                 <div className="bg-black p-8 aspect-video flex flex-col items-center justify-center">
