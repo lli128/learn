@@ -817,7 +817,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
                   <a href="tel:+12269750627" className="hover:text-cyan-400 transition-colors">
-                    电话 (226) 975-0627
+                    电话 (548) 377-2188
                   </a>
                 </li>
                 <li>
