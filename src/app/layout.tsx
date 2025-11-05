@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CanLearn:Dr. Li's Learning Clinic",
+  title: "CanLearn: Dr. Li's Learning Clinic",
   description: "Dr. Li's Learning Clinic",
 };
 
