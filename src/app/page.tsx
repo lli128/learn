@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { BookingDialog } from "@/components/BookingDialog";
 import {
   Github,
   Shield,
@@ -39,28 +44,29 @@ import {
 } from "lucide-react";
 
 export default function Home() {
+  const [bookingOpen, setBookingOpen] = useState(false);
   return (
     <div className="min-h-screen bg-[#0a0a0f] text-white">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-[#0a0a0f]/80 backdrop-blur-sm border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-pink-500 rounded-lg flex items-center justify-center font-bold text-sm">
                 李
               </div>
               <span className="text-xl font-bold">Dr. Li's Learning Clinic</span>
-            </div>
+            </Link>
             <div className="hidden md:flex items-center gap-6 text-sm">
               <a href="#home" className="hover:text-cyan-400 transition-colors">
                 首页 Home
               </a>
-              <a
-                href="#features"
+              <Link
+                href="/features"
                 className="hover:text-cyan-400 transition-colors"
               >
                 特色 Features
-              </a>
+              </Link>
               <a
                 href="#programs"
                 className="hover:text-cyan-400 transition-colors"
@@ -71,13 +77,13 @@ export default function Home() {
                 关于 About
               </a>
             </div>
-            <a
-              href="tel:+12269750627"
+            <button
+              onClick={() => setBookingOpen(true)}
               className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors border border-white/10"
             >
               <Calendar className="w-4 h-4" />
               <span className="text-sm">预约 Book Now</span>
-            </a>
+            </button>
           </div>
         </div>
       </nav>
@@ -97,9 +103,9 @@ export default function Home() {
                 英语专家 English Language Specialist
               </Badge>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-pink-500 bg-clip-text text-transparent">
-                Dr. Li's Learning
+                Dr. Li's
                 <br />
-                Clinic
+                Learning Clinic
               </h1>
               <p className="text-2xl md:text-3xl text-gray-300 mb-6">
                 专注英语，成就梦想
@@ -113,6 +119,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <Button
                   size="lg"
+                  onClick={() => setBookingOpen(true)}
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
                 >
                   免费评估 Free Assessment
@@ -120,7 +127,7 @@ export default function Home() {
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
+                  onClick={() => setBookingOpen(true)}
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0"
                 >
                   <Clock className="mr-2 w-4 h-4" />
@@ -139,17 +146,17 @@ export default function Home() {
                     <div className="w-3 h-3 rounded-full bg-green-500" />
                   </div>
                   <div className="flex-1 text-center text-sm text-gray-400">
-                canlearn.pro
+                    canlearn.pro
                   </div>
                 </div>
                 <div className="bg-black p-8 aspect-video flex flex-col items-center justify-center">
                   <div className="text-center">
                     <BookOpen className="w-16 h-16 mx-auto mb-4 text-cyan-400" />
-                    <h3 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-2">
+                    <h3 className="text-3xl font-bold text-white mb-2">
                       李博士学习诊所
                     </h3>
                     <p className="text-sm text-gray-400">
-                      CLB 5/7 • IELTS • Speaking & Writing Excellence
+                      CLB • IELTS • English Excellence
                     </p>
                   </div>
                 </div>
@@ -177,7 +184,7 @@ export default function Home() {
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
                 <Award className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-3">CELPIP 考官 Official Examiner</h3>
+              <h3 className="text-xl font-bold mb-3 text-cyan-400 hover:text-cyan-300 transition-colors cursor-default">CELPIP 考官 Official Examiner</h3>
               <p className="text-gray-400 leading-relaxed">
                 现任CELPIP写作考官，深谙评分标准和应试策略。Current CELPIP Writing Examiner with deep insights into scoring criteria.
               </p>
@@ -188,7 +195,7 @@ export default function Home() {
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
                 <MessageSquare className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-3">口语突破 Speaking Excellence</h3>
+              <h3 className="text-xl font-bold mb-3 text-green-400 hover:text-green-300 transition-colors cursor-default">口语突破 Speaking Excellence</h3>
               <p className="text-gray-400 leading-relaxed">
                 针对性口语训练，模拟真实考试场景，快速提升流利度和准确性。Targeted speaking practice with real exam simulations.
               </p>
@@ -199,7 +206,7 @@ export default function Home() {
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
                 <PenTool className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-3">写作提升 Writing Mastery</h3>
+              <h3 className="text-xl font-bold mb-3 text-orange-400 hover:text-orange-300 transition-colors cursor-default">写作提升 Writing Mastery</h3>
               <p className="text-gray-400 leading-relaxed">
                 系统写作训练，涵盖所有题型，提供详细批改和个性化反馈。Comprehensive writing training with detailed feedback.
               </p>
@@ -210,7 +217,7 @@ export default function Home() {
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
                 <Target className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-3">定制课程 Customized Plans</h3>
+              <h3 className="text-xl font-bold mb-3 text-purple-400 hover:text-purple-300 transition-colors cursor-default">定制课程 Customized Plans</h3>
               <p className="text-gray-400 leading-relaxed">
                 根据您的当前水平和目标分数，量身定制学习计划。Personalized study plans based on your level and target score.
               </p>
@@ -221,7 +228,7 @@ export default function Home() {
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
                 <CheckCircle className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-3">高通过率 High Success Rate</h3>
+              <h3 className="text-xl font-bold mb-3 text-blue-400 hover:text-blue-300 transition-colors cursor-default">高通过率 High Success Rate</h3>
               <p className="text-gray-400 leading-relaxed">
                 95%的学生在3个月内达到目标分数。95% of students achieve their target scores within 3 months.
               </p>
@@ -232,7 +239,7 @@ export default function Home() {
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
                 <Globe className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-3">移民就业 Immigration & Career</h3>
+              <h3 className="text-xl font-bold mb-3 text-teal-400 hover:text-teal-300 transition-colors cursor-default">移民就业 Immigration & Career</h3>
               <p className="text-gray-400 leading-relaxed">
                 专注移民和职业发展所需的英语能力培训。Focus on English skills for immigration and career advancement.
               </p>
@@ -259,7 +266,7 @@ export default function Home() {
                   <div className="text-2xl font-bold">5</div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">CLB 5 基础强化</h3>
+                  <h3 className="text-2xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors cursor-default">CLB 5 基础强化</h3>
                   <p className="text-gray-400 text-sm">
                     Canadian Language Benchmark Level 5
                   </p>
@@ -293,7 +300,7 @@ export default function Home() {
                   <div className="text-2xl font-bold">7</div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">CLB 7 高级进阶</h3>
+                  <h3 className="text-2xl font-bold text-purple-400 hover:text-purple-300 transition-colors cursor-default">CLB 7 高级进阶</h3>
                   <p className="text-gray-400 text-sm">
                     Canadian Language Benchmark Level 7
                   </p>
@@ -327,7 +334,7 @@ export default function Home() {
                   <MessageSquare className="w-8 h-8" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">雅思口语 IELTS Speaking</h3>
+                  <h3 className="text-2xl font-bold text-green-400 hover:text-green-300 transition-colors cursor-default">雅思口语 IELTS Speaking</h3>
                   <p className="text-gray-400 text-sm">
                     Part 1, 2 & 3 Mastery
                   </p>
@@ -365,7 +372,7 @@ export default function Home() {
                   <PenTool className="w-8 h-8" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">雅思写作 IELTS Writing</h3>
+                  <h3 className="text-2xl font-bold text-orange-400 hover:text-orange-300 transition-colors cursor-default">雅思写作 IELTS Writing</h3>
                   <p className="text-gray-400 text-sm">
                     Task 1 & Task 2 Excellence
                   </p>
@@ -421,7 +428,7 @@ export default function Home() {
                     1:1
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-1">一对一课程 One-on-One</div>
+                    <div className="font-semibold mb-1 text-white">一对一课程 One-on-One</div>
                     <div className="text-sm text-gray-400">
                       60分钟/课 60 min - 个性化定制 Personalized
                     </div>
@@ -433,7 +440,7 @@ export default function Home() {
                     1:3
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-1">小班课程 Small Group</div>
+                    <div className="font-semibold mb-1 text-white">小班课程 Small Group</div>
                     <div className="text-sm text-gray-400">
                       90分钟/课 90 min - 3-5人小组 3-5 students
                     </div>
@@ -445,7 +452,7 @@ export default function Home() {
                     冲刺
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-1">考前冲刺 Intensive Prep</div>
+                    <div className="font-semibold mb-1 text-white">考前冲刺 Intensive Prep</div>
                     <div className="text-sm text-gray-400">
                       2小时/课 2 hours - 模拟考试 Mock Tests
                     </div>
@@ -468,21 +475,21 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="p-4 bg-black/30 rounded-lg border border-white/5">
                   <div className="text-sm text-cyan-400 mb-2">电话 Phone</div>
-                  <div className="font-mono text-lg bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
+                  <div className="font-mono text-lg text-white">
                     (548) 377-2188
                   </div>
                 </div>
 
                 <div className="p-4 bg-black/30 rounded-lg border border-white/5">
                   <div className="text-sm text-cyan-400 mb-2">邮箱 Email</div>
-                  <div className="font-mono text-lg bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
+                  <div className="font-mono text-lg text-white">
                     li81@uwindsor.ca
                   </div>
                 </div>
 
                 <div className="p-4 bg-black/30 rounded-lg border border-white/5">
                   <div className="text-sm text-cyan-400 mb-2">微信 WeChat</div>
-                  <div className="font-mono text-lg bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
+                  <div className="font-mono text-lg text-white">
                     linl71
                   </div>
                 </div>
@@ -500,7 +507,7 @@ export default function Home() {
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center">
                 <Monitor className="w-5 h-5" />
               </div>
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">授课方式 Teaching Methods</h3>
+              <h3 className="text-2xl font-bold text-pink-400 hover:text-pink-300 transition-colors cursor-default">授课方式 Teaching Methods</h3>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -509,7 +516,7 @@ export default function Home() {
                   <Monitor className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">线上授课</div>
+                  <div className="font-semibold text-white">线上授课</div>
                   <div className="text-sm text-gray-400">Online via Zoom</div>
                 </div>
               </div>
@@ -519,7 +526,7 @@ export default function Home() {
                   <HomeIcon className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">线下面授</div>
+                  <div className="font-semibold text-white">线下面授</div>
                   <div className="text-sm text-gray-400">In-Person</div>
                 </div>
               </div>
@@ -529,7 +536,7 @@ export default function Home() {
                   <MessageSquare className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">口语陪练</div>
+                  <div className="font-semibold text-white">口语陪练</div>
                   <div className="text-sm text-gray-400">Speaking Practice</div>
                 </div>
               </div>
@@ -539,7 +546,7 @@ export default function Home() {
                   <PenTool className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">作文批改</div>
+                  <div className="font-semibold text-white">作文批改</div>
                   <div className="text-sm text-gray-400">Essay Correction</div>
                 </div>
               </div>
@@ -600,7 +607,7 @@ export default function Home() {
                   张
                 </div>
                 <div>
-                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">张伟 David Zhang</div>
+                  <div className="font-semibold text-white">张伟 David Zhang</div>
                   <div className="text-sm text-gray-400">CLB 7 达标 Achieved</div>
                 </div>
               </div>
@@ -618,7 +625,7 @@ export default function Home() {
                   李
                 </div>
                 <div>
-                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">李梅 Mei Li</div>
+                  <div className="font-semibold text-white">李梅 Mei Li</div>
                   <div className="text-sm text-gray-400">IELTS 7.0 口语 Speaking</div>
                 </div>
               </div>
@@ -636,7 +643,7 @@ export default function Home() {
                   王
                 </div>
                 <div>
-                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">王强 Kevin Wang</div>
+                  <div className="font-semibold text-white">王强 Kevin Wang</div>
                   <div className="text-sm text-gray-400">IELTS 7.5 写作 Writing</div>
                 </div>
               </div>
@@ -654,7 +661,7 @@ export default function Home() {
                   陈
                 </div>
                 <div>
-                  <div className="font-semibold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">陈晓 Grace Chen</div>
+                  <div className="font-semibold text-white">陈晓 Grace Chen</div>
                   <div className="text-sm text-gray-400">CLB 5 快速达标 Achieved</div>
                 </div>
               </div>
@@ -709,7 +716,7 @@ export default function Home() {
                   李
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">李博士学习诊所</h3>
+                  <h3 className="text-xl font-bold text-white">李博士学习诊所</h3>
                   <p className="text-sm text-gray-400">
                     Dr. Li's Learning Clinic
                   </p>
@@ -816,7 +823,7 @@ export default function Home() {
               <h4 className="font-semibold mb-4">联系我们 Contact</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <a href="tel:+12269750627" className="hover:text-cyan-400 transition-colors">
+                  <a href="tel:+15483772188" className="hover:text-cyan-400 transition-colors">
                     电话 (548) 377-2188
                   </a>
                 </li>
@@ -847,6 +854,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Booking Dialog */}
+      <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
     </div>
   );
 }
